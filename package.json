@@ -10,6 +10,10 @@
     "@types/node": "^16.11.36",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
+    "axios": "^0.27.2",
+    "mobx": "^6.6.0",
+    "mobx-react-lite": "^3.4.0",
+    "prettier": "^2.7.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",
@@ -40,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.8.0"
   }
 }

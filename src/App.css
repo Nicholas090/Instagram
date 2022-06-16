@@ -21,6 +21,7 @@ body {
   flex-direction: column;
 }
 .regBlcok {
+  display: flex;
   margin-top: 20px;
   width: 400px;
   height: 65px;
@@ -33,7 +34,7 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
-  padding-top: 15px;
+  padding-top: 36px
 }
 .block1Logo {
   display: flex;
@@ -72,6 +73,7 @@ body {
   font-size: large;
   font-style: italic;
   color: #ffffff;
+  margin-bottom: 30px;
 }
 .logoBtn:active {
   background-color: #0094f661;
@@ -85,6 +87,7 @@ body {
 
 .formRegLogText {
   font-family: 'Poppins', sans-serif;
+  margin: auto;
 }
 
 .formRegLog {
