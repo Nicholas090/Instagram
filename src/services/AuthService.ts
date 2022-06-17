@@ -1,4 +1,4 @@
-import $api from '../models/response';
+import $api from '../http';
 import { AxiosResponse } from 'axios';
 import { AuthResponse, IResponseError } from '../models/response/AuthResponse';
 
@@ -16,7 +16,7 @@ export default class AuthService {
 		userName: string,
 		userNickName: string,
 	): Promise<AxiosResponse<AuthResponse>> {
-		return $api.post<AuthResponse>('/login', { email, password, userName, userNickName });
+		return $api.post<AuthResponse>('/registration', { email, password, userName, userNickName });
 	}
 
 	static async logout(): Promise<void> {

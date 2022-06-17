@@ -1,0 +1,1 @@
+export const SET_SIDE_BAR_ICON = 'SET_SIDE_BAR_ICON';

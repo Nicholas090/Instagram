@@ -95,3 +95,16 @@ body {
   color: #0095f6;
   text-decoration: none;
 }
+.sideBarWrapper {
+  position: absolute;
+  height: 550px;
+  width: 90px;
+  background-color: #EFEFEF;
+  left: 45px;
+  border-radius: 56px;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+

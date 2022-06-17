@@ -2,7 +2,7 @@ import { IUser } from '../models/IUser';
 import { makeAutoObservable } from 'mobx';
 import axios from 'axios';
 import { AuthResponse } from '../models/response/AuthResponse';
-import { API_URL } from '../models/response';
+import { API_URL } from '../http';
 import AuthService from '../services/AuthService';
 
 export default class Store {
@@ -40,6 +40,7 @@ export default class Store {
 			localStorage.setItem('token', response.data.accessToken);
 			this.setAuth = true;
 			this.setUser = response.data.user;
+			return true;
 		} catch (e: any) {
 			console.log(e.response.data.message);
 		}
@@ -66,6 +67,7 @@ export default class Store {
 			console.log(response);
 			return true;
 		} catch (e: any) {
+			console.log('ooooooooooooooooooooooo');
 			console.log(e);
 		}
 	}

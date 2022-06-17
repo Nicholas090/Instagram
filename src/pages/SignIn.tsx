@@ -27,8 +27,6 @@ const SignIn = observer(() => {
 		e.preventDefault();
 		setFormErr(validate(formValues));
 		setSubmit(true);
-		console.log(formErr);
-		console.log(formValues);
 	};
 
 	useEffect(() => {
@@ -53,18 +51,12 @@ const SignIn = observer(() => {
 	}, [isSubmit, formErr]);
 
 	useEffect(() => {
-		//
 		if (localStorage.getItem('token') && !store.setAuth) {
-			console.log('gays');
-
-			store
-				.checkAuth()
-				.then((res: boolean | undefined) => {
-					if (res === true) {
-						navigate('/user');
-					}
-				})
-				.catch((e) => console.log(e));
+			store.checkAuth().then((res: boolean | undefined) => {
+				if (res === true) {
+					navigate('/user');
+				}
+			});
 		}
 	}, []);
 

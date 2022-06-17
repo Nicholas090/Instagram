@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logoLogin.png';
+import { Context } from '../index';
 
 interface IRegistration {
 	email: string;
@@ -10,6 +11,9 @@ interface IRegistration {
 }
 
 const Registration = () => {
+	let navigate = useNavigate();
+	const { store } = useContext(Context);
+
 	const initialValues: IRegistration = { email: '', password: '', userNickName: '', userName: '' };
 	const [formValues, setFormValues] = useState<IRegistration>(initialValues);
 	const [formErr, setFormErr] = useState<IRegistration | null>(null);
@@ -29,10 +33,22 @@ const Registration = () => {
 	};
 
 	useEffect(() => {
-		if (formErr === null && isSubmit === true) {
+		if (formErr === null && isSubmit) {
 			console.log(`${formValues} success`);
-			setFormValues({ email: '', password: '', userNickName: '', userName: '' });
-			setSubmit(false);
+			const { email, password, userName, userNickName } = formValues;
+
+			store
+				.registration(email, password, userName, userNickName)
+				.then((res: boolean | undefined) => {
+					if (res === true) {
+						setFormValues({ email: '', password: '', userNickName: '', userName: '' });
+						setSubmit(false);
+						navigate('/user');
+					}
+				})
+				.finally(() => {
+					setSubmit(false);
+				});
 		}
 	}, [isSubmit, formErr]);
 

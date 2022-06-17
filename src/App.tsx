@@ -7,13 +7,13 @@ import SignIn from './pages/SignIn';
 import UserPage from './pages/UserPage';
 
 function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<SignIn />} />
-      <Route path="/register" element={<Registration />} />
-      <Route path="/user" element={<UserPage />} />
-    </Routes>
-  );
+	return (
+		<Routes>
+			<Route path="/xxx" element={<SignIn />} />
+			<Route path="/register" element={<Registration />} />
+			<Route path="/" element={<UserPage />} />
+		</Routes>
+	);
 }
 
 export default App;
