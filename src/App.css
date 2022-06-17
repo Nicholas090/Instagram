@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-.regBlcok {
+.regBlock {
   display: flex;
   margin-top: 20px;
   width: 400px;
@@ -37,13 +37,13 @@ body {
   padding-top: 36px
 }
 .block1Logo {
-  display: flex;
+  /*display: flex;*/
   justify-content: center;
   margin-bottom: 10px;
   display: block;
 }
 .block2Logo {
-  display: flex;
+  /*display: flex;*/
   justify-content: center;
   padding-bottom: 15px;
   display: block;
@@ -53,12 +53,12 @@ body {
   height: 40px;
   padding: 9px 0 7px 8px;
   text-overflow: ellipsis;
-  border: none;
+  /*border: none;*/
   border: 1px solid rgb(79, 79, 79);
   border-radius: 5px;
 }
 .blockLogoBtn {
-  display: flex;
+  /*display: flex;*/
   justify-content: center;
   padding-bottom: 15px;
   display: block;
@@ -107,4 +107,13 @@ body {
   transform: translateY(-50%);
 
 }
+.sideBarWrapper > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
 
+.sideBarWrapper > div > div {
+  margin: auto;
+}

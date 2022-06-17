@@ -8,36 +8,37 @@ const SideBar = () => {
 	return (
 		<div className="sideBarWrapper">
 			<div
-				style={{
-					display: 'flex',
-					flexDirection: 'column',
-					justifyContent: 'space-between',
-					height: '100%',
-				}}
+			// style={{
+			// 	display: 'flex',
+			// 	flexDirection: 'column',
+			// 	justifyContent: 'space-between',
+			// 	height: '100%',
+			// }}
 			>
-				<div style={{ margin: 'auto' }}>
+				<div>
 					<div onClick={iconClick}>
-						<HomeIcon />
+						<HomeIcon active={true} />
 					</div>
 				</div>
-				<div style={{ margin: 'auto' }}>
+				<div>
 					<div onClick={iconClick}>
-						<LoopIcon />
+						<LoopIcon active={true} />
 					</div>
 				</div>
-				<div style={{ margin: 'auto' }}>
-					<div onClick={iconClick}>
-						<VideoIcon />
+				<div>
+					<div>
+						<VideoIcon active={true} />
 					</div>
 				</div>
-				<div style={{ margin: 'auto' }}>
+				<div>
 					<div onClick={iconClick}>
-						<HeartIcon />
+						<HeartIcon active={true} />
 					</div>
 				</div>
-				<div style={{ margin: 'auto' }}>
+
+				<div>
 					<div onClick={iconClick}>
-						<UserIcon />
+						<UserIcon active={true} />
 					</div>
 				</div>
 			</div>

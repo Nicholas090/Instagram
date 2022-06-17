@@ -1,0 +1,1 @@
+export const ACTIVE_SIDE_BAR_ICON = 'ACTIVE_SIDE_BAR_ICON';

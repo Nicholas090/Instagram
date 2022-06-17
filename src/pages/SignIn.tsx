@@ -118,7 +118,7 @@ const SignIn = observer(() => {
 					</div>
 				</form>
 			</div>
-			<div className="regBlcok">
+			<div className="regBlock">
 				<p className="formRegLogText">
 					У вас ещё нет аккаунта?{' '}
 					<Link to="/register" className="formRegLog">
