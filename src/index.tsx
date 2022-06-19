@@ -16,13 +16,13 @@ export const Context = createContext<IStoreContext>({
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-	<React.StrictMode>
-		{/*<Context.Provider value={{ store }}>*/}
+	// <React.StrictMode>
+	<Context.Provider value={{ store }}>
 		<Provider store={storeRedux}>
 			<BrowserRouter>
 				<App />
 			</BrowserRouter>
 		</Provider>
-		{/*</Context.Provider>*/}
-	</React.StrictMode>,
+	</Context.Provider>,
+	// </React.StrictMode>,
 );

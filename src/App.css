@@ -96,15 +96,11 @@ body {
   text-decoration: none;
 }
 .sideBarWrapper {
-  position: absolute;
   height: 550px;
   width: 90px;
   background-color: #EFEFEF;
-  left: 45px;
   border-radius: 56px;
-  margin: 0 auto;
-  top: 50%;
-  transform: translateY(-50%);
+  margin: 70px 0 auto 45px;
 
 }
 .sideBarWrapper > div{
@@ -116,4 +112,24 @@ body {
 
 .sideBarWrapper > div > div {
   margin: auto;
+}
+
+.userLogoWrapper {
+  margin: auto;
+  text-align: center;
+}
+.userStorieWrapper {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  border: 5px solid #D6295D;
+  margin-right: 15px;
+}
+.userStorie{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin: auto;
+
 }

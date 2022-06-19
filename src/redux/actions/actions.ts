@@ -1,1 +1,3 @@
 export const SET_SIDE_BAR_ICON = 'SET_SIDE_BAR_ICON';
+
+export const SET_USERS_STORIE_INFO = 'SET_USERS_STORIE_INFO';

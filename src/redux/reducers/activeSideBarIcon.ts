@@ -1,6 +1,6 @@
 import { SET_SIDE_BAR_ICON } from '../actions/actions';
 
-export type ISideBarIcons = 'reels' | 'loop' | 'search' | 'profile' | 'home' | 'none';
+export type ISideBarIcons = 'reels' | 'loop' | 'profile' | 'home' | 'none';
 
 interface ISideBarIconsState {
 	icon: ISideBarIcons;

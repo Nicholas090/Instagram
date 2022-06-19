@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import logo from '../assets/logoLogin.png';
+import logo from '../assets/img/logoLogin.png';
 import { Context } from '../index';
 
 interface IRegistration {
