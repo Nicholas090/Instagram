@@ -120,7 +120,7 @@ body {
 }
 .userStorieWrapper {
   height: 100px;
-  width: 100px;
+  min-width: 100px;
   border-radius: 50%;
   display: flex;
   border: 5px solid #D6295D;
@@ -128,8 +128,32 @@ body {
 }
 .userStorie{
   height: 80px;
-  width: 80px;
+  min-width: 80px;
   border-radius: 50%;
   margin: auto;
 
+}
+
+.main-container {
+  height: 150px;
+  width: 575px;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+}
+
+
+.window {                           
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.all-items {
+  height: 100%;
+  display: flex;
+  transition: translate;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
 }

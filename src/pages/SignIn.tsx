@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import logo from '../assets/img/logoLogin.png';
+import logo from '../assets/LogoUserPage.png';
 import { Context } from '../index';
 import { IResponseError } from '../models/response/AuthResponse';
 import { observer } from 'mobx-react-lite';

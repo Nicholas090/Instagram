@@ -6,6 +6,7 @@ import axios from 'axios';
 import { IUsersStorieInfo } from '../redux/reducers/usersStorieInfo';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
 import { setUserStorieInfo } from '../redux/actions/actionCreater';
+import { Carousel } from '../Components/Carousel';
 
 const UserPage = () => {
 	const dispatch = useAppDispatch();
@@ -18,15 +19,11 @@ const UserPage = () => {
 				res.data.forEach((e: IUsersStorieInfo) => {
 					dispatch(setUserStorieInfo(e));
 				});
-
 				return res.data;
 			})
 			.catch((e) => {
 				console.log(e);
 			});
-		// };
-		//
-		// getUserData();
 	}, []);
 
 	return (
@@ -34,20 +31,11 @@ const UserPage = () => {
 			<LogoUserPage />
 			<div style={{ display: 'flex', justifyContent: 'flex-start' }}>
 				<SideBar />
-				<div
-					style={{
-						marginLeft: '40px',
-						marginTop: '50px',
-						display: 'flex',
-						// width: '700px',
-						justifyContent: 'space-between',
-						// overflow: 'scroll',
-					}}
-				>
+				<Carousel>
 					{stories.map((e, i) => {
 						return <UserStorie img={e.img} userName={e.userName} active={e.active} key={i} />;
 					})}
-				</div>
+				</Carousel>
 			</div>
 		</div>
 	);
