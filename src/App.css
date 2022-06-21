@@ -10,7 +10,7 @@ body {
 
 .loginBlock {
   background-color: #ffffff;
-  outline: 0.5px solid rgb(79, 79, 79);
+  outline: 1px solid rgb(79, 79, 79);
   margin-top: 50px;
   width: 400px;
   text-align: center;
@@ -26,7 +26,7 @@ body {
   width: 400px;
   height: 65px;
   background-color: #ffffff;
-  outline: 0.5px solid rgb(79, 79, 79);
+  outline: 1px solid rgb(79, 79, 79);
   text-align: center;
 }
 
@@ -118,7 +118,7 @@ body {
   margin: auto;
   text-align: center;
 }
-.userStorieWrapper {
+.userStoriesWrapper {
   height: 100px;
   min-width: 100px;
   border-radius: 50%;
@@ -126,7 +126,7 @@ body {
   border: 5px solid #D6295D;
   margin-right: 15px;
 }
-.userStorie{
+.userStories{
   height: 80px;
   min-width: 80px;
   border-radius: 50%;
@@ -135,8 +135,7 @@ body {
 }
 
 .main-container {
-  height: 150px;
-  width: 575px;
+  width: 460px;
   margin-left: 30px;
   display: flex;
   align-items: center;
@@ -152,8 +151,41 @@ body {
 .all-items {
   height: 100%;
   display: flex;
-  transition: translate;
+  /*transition: translate;*/
   transition-property: transform;
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
+}
+
+.addStoriesWrapper {
+  width: 30px;
+  height: 30px;
+  background-color: #0095F6;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  border-radius: 50%;
+  outline: 5px solid #ffffff;
+
+}
+
+.userClientStoriesWrapperNonActive {
+  display: flex;
+}
+.clientStories {
+  position: relative;
+}
+
+.carouselRightButtonWrapper {
+  height: 100px;
+  width: 50px;
+  border-radius: 42px;
+  background-color: #EFEFEF;
+  margin-left: 25px;
+  display: flex ;
+}
+
+.carouselRightButton{
+  margin: auto;
+  cursor: pointer;
 }

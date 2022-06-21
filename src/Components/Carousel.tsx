@@ -2,39 +2,37 @@ import React, { useState } from 'react';
 
 interface IProps {
 	children: React.ReactNode;
+	countAllStories: number;
+	countMaxStories: number;
+	storiesBlockWidth: number;
 }
 
-export const Carousel = ({ children }: IProps) => {
+export const Carousel = ({
+	children,
+	countAllStories,
+	countMaxStories,
+	storiesBlockWidth,
+}: IProps) => {
 	const [offset, setOffset] = useState<number>(0);
 	return (
-		<div style={{ display: 'flex', marginTop: '50px' }}>
+		<div style={{ display: 'flex' }}>
 			<div className="main-container">
-				{/*<button onClick={() => console.log('clicked')} />*/}
 				<div className="window">
 					<div className="all-items" style={{ transform: `translateX(${offset}px)` }}>
 						{children}
 					</div>
 				</div>
 			</div>
-			<div
-				style={{
-					height: '100px',
-					width: '50px',
-					borderRadius: '42px',
-					backgroundColor: '#EFEFEF',
-					marginLeft: '25px',
-					display: 'flex',
-				}}
-			>
+			<div className={'carouselRightButtonWrapper'}>
 				<div
+					className={'carouselRightButton'}
 					onClick={() =>
 						setOffset((currentOffset) => {
 							const newOffset = currentOffset - 115;
-							const maxOffset = (7 - 5) * 115;
+							const maxOffset = (countAllStories - countMaxStories) * storiesBlockWidth;
 							return Math.max(newOffset, -maxOffset);
 						})
 					}
-					style={{ margin: 'auto', cursor: 'pointer' }}
 				>
 					<svg
 						width="20"

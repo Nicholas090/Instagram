@@ -1,28 +1,24 @@
-import { SET_SIDE_BAR_ICON } from '../actions/actions';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export type ISideBarIcons = 'reels' | 'loop' | 'profile' | 'home' | 'none';
 
 interface ISideBarIconsState {
 	icon: ISideBarIcons;
 }
-interface actionsI {
-	type: string;
-	payload: ISideBarIcons;
-}
 
 const initialState: ISideBarIconsState = {
 	icon: 'none',
 };
 
-export const icons = (state: ISideBarIconsState = initialState, action: actionsI) => {
-	switch (action.type) {
-		case SET_SIDE_BAR_ICON:
-			return {
-				...state,
-				icon: action.payload,
-			};
+const iconsSlice = createSlice({
+	name: 'icons',
+	initialState,
+	reducers: {
+		chooseIcon(state, action: PayloadAction<ISideBarIcons>) {
+			return { ...state, icon: action.payload };
+		},
+	},
+});
 
-		default:
-			return state;
-	}
-};
+export const { chooseIcon } = iconsSlice.actions;
+export default iconsSlice;

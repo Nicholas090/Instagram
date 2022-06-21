@@ -1,8 +1,8 @@
-interface Iicon {
+interface IIcon {
 	active: boolean;
 }
 
-export const HomeIcon = ({ active }: Iicon) => {
+export const HomeIcon = ({ active }: IIcon) => {
 	if (active) {
 		return (
 			<svg
@@ -41,7 +41,7 @@ export const HomeIcon = ({ active }: Iicon) => {
 	}
 };
 
-export const ReelsIcon = ({ active }: Iicon) => {
+export const ReelsIcon = ({ active }: IIcon) => {
 	if (active) {
 		return (
 			<svg
@@ -104,7 +104,7 @@ export const ReelsIcon = ({ active }: Iicon) => {
 	}
 };
 
-export const LoopIcon = ({ active }: Iicon) => {
+export const LoopIcon = ({ active }: IIcon) => {
 	if (active) {
 		return (
 			<svg
@@ -156,7 +156,7 @@ export const LoopIcon = ({ active }: Iicon) => {
 	}
 };
 
-export const UserIcon = ({ active }: Iicon) => {
+export const UserIcon = ({ active }: IIcon) => {
 	if (active) {
 		return (
 			<svg
@@ -208,7 +208,7 @@ export const UserIcon = ({ active }: Iicon) => {
 	}
 };
 
-export const HeartIcon = ({ active }: Iicon) => {
+export const HeartIcon = ({ active }: IIcon) => {
 	if (active) {
 		return (
 			<svg

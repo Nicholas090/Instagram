@@ -14,7 +14,7 @@ const SignIn = observer(() => {
 	let navigate = useNavigate();
 	const initialValues: loginForm = { email: '', password: '' };
 	const [formValues, setFormValues] = useState<loginForm>(initialValues);
-	const [formErr, setFormErr] = useState<loginForm | null>(null);
+	const [formErr, setFormErr] = useState<Partial<loginForm> | null>(null);
 	const [isSubmit, setSubmit] = useState<boolean>(false);
 	const [errorMessage, setErrorMessage] = useState<string | null>();
 	const { store } = useContext(Context);
@@ -43,7 +43,7 @@ const SignIn = observer(() => {
 					navigate('/user');
 				})
 				.catch((e: IResponseError) => {
-					console.log(`Errrror ${e}`);
+					console.log(`Error ${e}`);
 					setSubmit(false);
 					setErrorMessage(e.message);
 				});
@@ -62,7 +62,7 @@ const SignIn = observer(() => {
 
 	const validate = (value: loginForm) => {
 		const errors: loginForm = {} as any;
-		const regex = /^[a-z0-9](\.?[a-z0-9]){1,}@ukr\.net$/;
+		const regex = /^[a-z\d](\.?[a-z\d]){3,}@ukr\.net$/;
 		if (!value.email) {
 			errors.email = 'Email is required';
 		} else if (!regex.test(value.email)) {

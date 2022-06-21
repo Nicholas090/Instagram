@@ -16,7 +16,7 @@ const Registration = () => {
 
 	const initialValues: IRegistration = { email: '', password: '', userNickName: '', userName: '' };
 	const [formValues, setFormValues] = useState<IRegistration>(initialValues);
-	const [formErr, setFormErr] = useState<IRegistration | null>(null);
+	const [formErr, setFormErr] = useState<Partial<IRegistration> | null>(null);
 	const [isSubmit, setSubmit] = useState<boolean>(false);
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -53,8 +53,8 @@ const Registration = () => {
 	}, [isSubmit, formErr]);
 
 	const validate = (value: IRegistration) => {
-		const errors: any = {} as any;
-		const regex = /^[a-z0-9](\.?[a-z0-9]){1,}@ukr\.net$/;
+		const errors: any = {};
+		const regex = /^[a-z\d](\.?[a-z\d]){3,}@ukr\.net$/;
 		if (!value.email) {
 			errors.email = 'Email is required';
 		} else if (!regex.test(value.email)) {

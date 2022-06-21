@@ -1,13 +1,11 @@
 import { HomeIcon, ReelsIcon, LoopIcon, UserIcon, HeartIcon } from '../icons/icons';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
-import { ISideBarIcons } from '../redux/reducers/activeSideBarIcon';
-import { setSideBarIcon } from '../redux/actions/actionCreater';
+import { chooseIcon, ISideBarIcons } from '../redux/reducers/activeSideBarIcon';
 
 const SideBar = () => {
 	const dispatch = useAppDispatch();
-	const iconClick = (active: ISideBarIcons) => {
-		dispatch(setSideBarIcon(active));
-		console.log('success');
+	const iconClick = (active: ISideBarIcons): void => {
+		dispatch(chooseIcon(active));
 	};
 
 	const active = useAppSelector((state) => state.icons.icon);

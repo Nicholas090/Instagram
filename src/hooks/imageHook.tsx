@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const useImage = (fileName: string) => {
 	const [loading, setLoading] = useState<boolean>(true);
-	const [error, setError] = useState<any>(null);
+	const [error, setError] = useState<null | unknown>(null);
 	const [image, setImage] = useState(null);
 
 	useEffect(() => {
