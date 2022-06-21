@@ -12,9 +12,9 @@ export const UserClientStories = ({ img, userName, active }: IUsersStoriesInfo) 
 
 	return (
 		<div className={active ? 'userStoriesWrapper' : 'userClientStoriesWrapperNonActive'}>
-			<div className="userStories clientStories">
-				{loading ? null : <img src={image} />}
-				{!active && loading ? null : <div className="addStoriesWrapper"></div>}
+			<div className="userStories clientStories" onClick={() => console.log('clicked')}>
+				{loading ? null : <img src={image} className={'clientStoriesImg'} />}
+				{!active && loading ? null : <div className={'addStoriesWrapper plus'}></div>}
 			</div>
 		</div>
 	);
