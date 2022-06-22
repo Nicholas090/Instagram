@@ -59,7 +59,7 @@ const UserPage = () => {
 						{posts.map((e, i) => {
 							return (
 								<div className={'postWrapper'}>
-									<UserPost img={e.img} />
+									<UserPost imagePost={e.img} imagePostStories={''} />
 								</div>
 							);
 						})}
