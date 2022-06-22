@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import exp from 'constants';
 
 export interface IUsersStoriesInfo {
 	img: string;

@@ -30,5 +30,28 @@
       "userName": "test",
       "active": true
     }
+  ],
+  "posts": [
+    {
+      "img": "postTest.png",
+      "userName": "test",
+      "active": true
+    },    {
+      "img": "postTest.png",
+      "userName": "test",
+      "active": true
+    },    {
+      "img": "postTest.png",
+      "userName": "test",
+      "active": true
+    },    {
+      "img": "postTest.png",
+      "userName": "test",
+      "active": true
+    },    {
+      "img": "postTest.png",
+      "userName": "test",
+      "active": true
+    }
   ]
 }

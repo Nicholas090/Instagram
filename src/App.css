@@ -126,6 +126,10 @@ body {
   border: 5px solid #D6295D;
   margin-right: 15px;
 }
+.userStoriesWrapper img {
+  max-width: 82px;
+  max-height: 82px;
+}
 .userStories{
   height: 80px;
   min-width: 80px;
@@ -135,7 +139,7 @@ body {
 }
 
 .main-container {
-  width: 460px;
+  max-width: 460px;
   margin-left: 30px;
   display: flex;
   align-items: center;
@@ -210,3 +214,55 @@ display: block;
   background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
   background-repeat:no-repeat;
 }
+.pointer {
+  cursor: pointer;
+}
+
+.postsBlockWrapper {
+  margin-top: 30px;
+}
+
+.postWrapper {
+  width: 600px;
+  height: 450px;
+  background-color: #EFEFEF;
+  border-radius: 36px;
+  margin-bottom: 30px;
+  padding: 15px;
+}
+
+.postImage {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.main-container-post {
+  /*width: 460px;*/
+  /*margin-left: 30px;*/
+  display: flex;
+  align-items: center;
+  background-color: rgb(248, 248, 248);
+
+}
+
+
+.window-post {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.all-items-post {
+  height: 100%;
+  display: flex;
+  /*transition: translate;*/
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+.all-items-post img {
+  max-height: 400px;
+  max-width: 400px;
+}
+
+

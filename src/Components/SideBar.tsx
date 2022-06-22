@@ -13,17 +13,17 @@ const SideBar = () => {
 		<div className="sideBarWrapper">
 			<div>
 				<div>
-					<div onClick={() => iconClick('home')}>
+					<div onClick={() => iconClick('home')} className={'pointer'}>
 						<HomeIcon active={active === 'home'} />
 					</div>
 				</div>
 				<div>
-					<div onClick={() => iconClick('loop')}>
+					<div onClick={() => iconClick('loop')} className={'pointer'}>
 						<LoopIcon active={active === 'loop'} />
 					</div>
 				</div>
 				<div>
-					<div onClick={() => iconClick('reels')}>
+					<div onClick={() => iconClick('reels')} className={'pointer'}>
 						<ReelsIcon active={active === 'reels'} />
 					</div>
 				</div>
@@ -34,7 +34,7 @@ const SideBar = () => {
 				</div>
 
 				<div>
-					<div onClick={() => iconClick('profile')}>
+					<div onClick={() => iconClick('profile')} className={'pointer'}>
 						<UserIcon active={active === 'profile'} />
 					</div>
 				</div>
