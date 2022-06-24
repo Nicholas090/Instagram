@@ -2,14 +2,14 @@ import useImage from '../hooks/imageHook';
 import defaultImage from '../assets/defaultImage.jpeg';
 import { IUserPost } from '../types/types';
 import defaultUserIcon from '../assets/defaultUserIcon.png';
-import { CommentIcon, HeartIcon, HeartLike, MessageIcon, SaveIcon } from '../icons/icons';
+import { CommentIcon, HeartLike, MessageIcon, SaveIcon } from '../icons/icons';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
 import { setLikedPost } from '../redux/reducers/usersPosts';
 
 interface IUserPostProps extends IUserPost {}
 
 export const UserPost = (Post: IUserPostProps) => {
-	const { imagePost, imageAvatar, userNickName, content, liked, id } = Post;
+	const { imagePost, imageAvatar, userNickName, content, liked, id, likeCount } = Post;
 	const currentPostImage = useImage(imagePost);
 	const currentAvatarImage = useImage(imageAvatar);
 	if (currentPostImage.error) {
@@ -30,7 +30,7 @@ export const UserPost = (Post: IUserPostProps) => {
 	const dispatch = useAppDispatch();
 
 	return (
-		<>
+		<article className={'postWrapper'}>
 			{currentPostImage.loading || currentPostImage.error || !currentPostImage.image ? (
 				<div className={'defaultImagePostWrapper postImage'}>
 					<img src={defaultImage} className={'postImage'} />
@@ -94,7 +94,10 @@ export const UserPost = (Post: IUserPostProps) => {
 						</button>
 					</div>
 				</section>
+				<section className={'userPostLikeCountWrapper'}>
+					<span className={'userPostLikeCount'}>{likeCount}</span>
+				</section>
 			</div>
-		</>
+		</article>
 	);
 };

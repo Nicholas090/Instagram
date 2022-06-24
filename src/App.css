@@ -111,16 +111,18 @@ body {
   background-color: #EFEFEF;
   border-radius: 56px;
   margin: 70px 0 auto 45px;
-
-}
-.sideBarWrapper > div{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  /*justify-content: space-around;*/
+
+}
+.sideBarWrapper  div{
+  display: flex;
+  height: 20%;
 }
 
-.sideBarWrapper > div > div {
+.sideBarWrapper div  button {
+  border: none;
   margin: auto;
 }
 
@@ -388,4 +390,7 @@ display: block;
   width: 40px;
 }
 
+.userPostLikeCountWrapper {
+  margin-top: 5px;
+}
 

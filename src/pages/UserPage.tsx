@@ -10,8 +10,11 @@ import { IUsersStoriesInfo, setStoriesInfo } from '../redux/reducers/usersStorie
 import { CarouselPost } from '../Components/CarouselPost';
 import { IUsersPostsInfo, setPostsInfo } from '../redux/reducers/usersPosts';
 import { UserPost } from '../Components/UserPost';
+import { useId } from 'react';
 
 const UserPage = () => {
+	const reactId = useId();
+
 	const dispatch = useAppDispatch();
 	const stories = useAppSelector((state) => state.userStoriesInfo.userStoriesInfo);
 	const posts = useAppSelector((state) => state.userPostsInfo.userPostsInfo);
@@ -23,7 +26,7 @@ const UserPage = () => {
 				res.data.forEach((e: IUsersStoriesInfo) => {
 					dispatch(setStoriesInfo(e));
 				});
-				return res.data;
+				// return res.data;
 			})
 			.catch((e) => {
 				console.log(e);
@@ -57,11 +60,9 @@ const UserPage = () => {
 					</div>
 					<div className={'postsBlockWrapper'}>
 						{posts.map((post, i) => {
-							return (
-								<article className={'postWrapper'} key={post.id}>
-									<UserPost {...post} />
-								</article>
-							);
+							const generatedKey = new Date().getTime() + Math.random();
+
+							return <UserPost {...post} key={generatedKey} />;
 						})}
 					</div>
 				</div>

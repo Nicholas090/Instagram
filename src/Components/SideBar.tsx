@@ -12,30 +12,30 @@ const SideBar = () => {
 	return (
 		<aside className="sideBarWrapper">
 			<div>
-				<div onClick={() => iconClick('home')} className={'pointer'}>
+				<button onClick={() => iconClick('home')} className={'pointer'}>
 					<HomeIcon active={active === 'home'} />
-				</div>
-				<div>
-					<div onClick={() => iconClick('loop')} className={'pointer'}>
-						<LoopIcon active={active === 'loop'} />
-					</div>
-				</div>
-				<div>
-					<div onClick={() => iconClick('reels')} className={'pointer'}>
-						<ReelsIcon active={active === 'reels'} />
-					</div>
-				</div>
-				<div>
-					<div>
-						<HeartIcon active={true} />
-					</div>
-				</div>
+				</button>
+			</div>
+			<div>
+				<button onClick={() => iconClick('loop')} className={'pointer'}>
+					<LoopIcon active={active === 'loop'} />
+				</button>
+			</div>
+			<div>
+				<button onClick={() => iconClick('reels')} className={'pointer'}>
+					<ReelsIcon active={active === 'reels'} />
+				</button>
+			</div>
+			<div>
+				<button>
+					<HeartIcon active={true} />
+				</button>
+			</div>
 
-				<div>
-					<div onClick={() => iconClick('profile')} className={'pointer'}>
-						<UserIcon active={active === 'profile'} />
-					</div>
-				</div>
+			<div>
+				<button onClick={() => iconClick('profile')} className={'pointer'}>
+					<UserIcon active={active === 'profile'} />
+				</button>
 			</div>
 		</aside>
 	);

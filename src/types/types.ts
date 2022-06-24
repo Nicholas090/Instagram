@@ -6,4 +6,5 @@ export interface IUserPost {
 	content: string;
 	liked: boolean;
 	id: number;
+	likeCount: number;
 }
