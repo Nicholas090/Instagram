@@ -231,3 +231,117 @@ export const HeartIcon = ({ active }: IIcon) => {
 		return null;
 	}
 };
+
+interface IIconWithClick {
+	active: boolean;
+	onClick: () => void;
+}
+
+export const HeartLike = ({ active, onClick }: IIconWithClick) => {
+	if (active) {
+		return (
+			<svg
+				onClick={onClick}
+				width="22"
+				height="20"
+				viewBox="0 0 22 19"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M21.133 4.35059C18.8458 -2.10492 11.4121 -0.287332 10.7331 2.94042C9.80384 -0.4772 2.54886 -1.95303 0.333058 4.35059C-1.93733 10.8185 8.06152 16.9591 10.3313 18.6927C10.5626 18.8693 10.9172 18.8844 11.154 18.7153C13.4604 17.0677 23.3971 10.6958 21.133 4.35059Z"
+					fill="#E92828"
+				/>
+			</svg>
+		);
+	} else {
+		return (
+			<svg
+				onClick={onClick}
+				width="19"
+				height="22"
+				viewBox="0 0 44 38"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M13 2C6.925 2 2 6.925 2 13C2 24 15 34 22 36.326C29 34 42 24 42 13C42 6.925 37.075 2 31 2C27.28 2 23.99 3.847 22 6.674C20.9857 5.22921 19.6382 4.05009 18.0715 3.23649C16.5049 2.42289 14.7653 1.99875 13 2Z"
+					stroke="#262626"
+					strokeWidth="3"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+				/>
+			</svg>
+		);
+	}
+};
+type IconClick = Pick<IIconWithClick, 'onClick'>;
+export const CommentIcon = ({ onClick }: IconClick) => {
+	return (
+		<svg
+			onClick={onClick}
+			width="20"
+			height="20"
+			viewBox="0 0 20 20"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M17.6432 15.1722C17.5975 15.0287 17.6196 14.8727 17.6988 14.7447C18.5482 13.3714 19.0391 11.7563 19.0391 10.0196C19.0391 5.03633 14.998 1 10.0196 1C5.03633 1 1 5.03633 1 10.0196C1 15.0028 5.03633 19.0391 10.0196 19.0391C11.8104 19.0391 13.4834 18.5155 14.8843 17.614C15.009 17.5338 15.1617 17.5083 15.3043 17.5489L17.8131 18.2629C18.1967 18.372 18.5474 18.0102 18.4263 17.6302L17.6432 15.1722Z"
+				stroke="#262626"
+				strokeWidth="1.5"
+				strokeMiterlimit="10"
+			/>
+		</svg>
+	);
+};
+
+export const MessageIcon = ({ onClick }: IconClick) => {
+	return (
+		<svg
+			onClick={onClick}
+			width="24"
+			height="22"
+			viewBox="0 0 20 20"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M1 5.97803L19.5783 0.999997L15.8559 18.9138L10.323 10.7075L1 5.97803Z"
+				stroke="#262626"
+				strokeWidth="1.5"
+				strokeMiterlimit="10"
+				strokeLinecap="round"
+				strokeLinejoin="round"
+			/>
+			<path
+				d="M10.2423 10.4062L19.5783 0.999762"
+				stroke="#262626"
+				strokeWidth="1.5"
+				strokeMiterlimit="10"
+				strokeLinecap="round"
+				strokeLinejoin="round"
+			/>
+		</svg>
+	);
+};
+
+export const SaveIcon = ({ onClick }: IconClick) => {
+	return (
+		<svg
+			onClick={onClick}
+			width="16"
+			height="19"
+			viewBox="0 0 16 19"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M14.9584 17.1593C14.9584 17.9605 14.0634 18.4363 13.3992 17.9884L8.53837 14.7098C8.20042 14.4819 7.75795 14.4819 7.42001 14.7098L2.55918 17.9884C1.895 18.4363 1 17.9605 1 17.1593V2C1 1.44772 1.44772 1 2 1H13.9584C14.5107 1 14.9584 1.44772 14.9584 2V17.1593Z"
+				stroke="#262626"
+				strokeWidth="1.5"
+				strokeMiterlimit="10"
+			/>
+		</svg>
+	);
+};

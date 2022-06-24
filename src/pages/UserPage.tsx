@@ -56,11 +56,11 @@ const UserPage = () => {
 						</Carousel>
 					</div>
 					<div className={'postsBlockWrapper'}>
-						{posts.map((e, i) => {
+						{posts.map((post, i) => {
 							return (
-								<div className={'postWrapper'}>
-									<UserPost imagePost={e.img} imagePostStories={''} />
-								</div>
+								<article className={'postWrapper'} key={post.id}>
+									<UserPost {...post} />
+								</article>
 							);
 						})}
 					</div>

@@ -19,7 +19,8 @@ export const userStoriesInfoSlice = createSlice({
 	initialState,
 	reducers: {
 		setStoriesInfo(state, action: PayloadAction<IUsersStoriesInfo>) {
-			return { ...state, userStoriesInfo: [...state.userStoriesInfo, action.payload] };
+			// return { ...state, userStoriesInfo: [...state.userStoriesInfo, action.payload] };
+			state.userStoriesInfo.push(action.payload);
 		},
 	},
 });

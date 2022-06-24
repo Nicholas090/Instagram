@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { IUserPost } from '../../types/types';
+import { stat } from 'fs';
 
-export interface IUsersPostsInfo {
-	img: string;
-}
+export interface IUsersPostsInfo extends IUserPost {}
 
 interface IInitialState {
 	userPostsInfo: IUsersPostsInfo[];
@@ -17,10 +17,18 @@ export const userPostsInfoSlice = createSlice({
 	initialState,
 	reducers: {
 		setPostsInfo(state, action: PayloadAction<IUsersPostsInfo>) {
-			return { ...state, userPostsInfo: [...state.userPostsInfo, action.payload] };
+			// return { ...state, userPostsInfo: [...state.userPostsInfo, action.payload] };
+			state.userPostsInfo.push(action.payload);
+		},
+		setLikedPost(state, action: PayloadAction<number>) {
+			state.userPostsInfo.map((e) => {
+				if (e.id === action.payload) {
+					e.liked = !e.liked;
+				}
+			});
 		},
 	},
 });
 
-export const { setPostsInfo } = userPostsInfoSlice.actions;
+export const { setPostsInfo, setLikedPost } = userPostsInfoSlice.actions;
 export default userPostsInfoSlice;

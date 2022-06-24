@@ -8,6 +8,16 @@ body {
   background-color: rgb(248, 248, 248);
 }
 
+@font-face {
+  font-family: 'Product-Sans-Regular';
+  src: url('./fonts/product-sans/ProductSansRegular.ttf');
+}
+@font-face {
+  font-family: 'Product-Sans-Italic';
+  src: url('./fonts/product-sans/ProductSansItalic.ttf');
+
+}
+
 .loginBlock {
   background-color: #ffffff;
   outline: 1px solid rgb(79, 79, 79);
@@ -179,6 +189,8 @@ body {
 }
 .clientStories {
   position: relative;
+  border: none;
+  background-color: transparent;
 }
 .clientStoriesImg {
 display: block;
@@ -197,6 +209,7 @@ display: block;
   background-color: #EFEFEF;
   margin-left: 25px;
   display: flex ;
+  border: none;
 }
 
 .carouselButton{
@@ -223,7 +236,7 @@ display: block;
 }
 
 .postWrapper {
-  width: 600px;
+  width: 650px;
   height: 450px;
   background-color: #EFEFEF;
   border-radius: 36px;
@@ -240,7 +253,7 @@ display: block;
 
 
 .postImage {
-  max-width: 400px;
+  /*max-width: 400px;*/
   max-height: 400px;
 }
 
@@ -280,7 +293,10 @@ display: block;
 }
 
 .postInfoWrapper {
-  padding-top: 25px;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 100%;
+
 }
 
 .userPostStoriesWrapper {
@@ -297,8 +313,79 @@ display: block;
   width: 100%;
   height: 100%;
 }
-.userPostStories{
-  border-radius: 50%;
-  margin: auto;
+.userPostAvatar{
 
 }
+
+.userPostAvatar img {
+  width: 52px;
+  height: 52px;
+}
+
+.userPostInfoWrapper {
+  display: flex;
+}
+.postUserNickNameWrapper {
+
+}
+.postUserNickNameWrapper span{
+  font-size: 20px;
+  font-family: 'Product-Sans-Regular', serif;
+}
+.postTime time {
+  font-size: 13px;
+  font-family: 'Product-Sans', serif;
+  color: #8D8D8D;
+}
+
+.postInfoNameTime {
+  display: flex;
+}
+.additionalPostInfo {
+  margin: 0 0 0 auto;
+  padding: 0;
+  display: flex;
+  border-color: transparent;;
+}
+
+.userPostContent {
+  font-family: 'Product-Sans-Italic', serif;
+}
+.clickedAdditionalInfoPost {
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+
+
+}
+.additionalPostInfo:active  .clickedAdditionalInfoPost{
+  background-color: #8D8D8D;
+  transition: 0.5s;
+
+}
+
+.userPostContentWrapper {
+  margin-top: 5px;
+}
+
+.userPostSectionButtons {
+  margin-top: 15px;
+}
+
+.userPostButtonsWrapper {
+  background-color: white;
+  border-radius: 30px;
+  width: 160px;
+  height: 45px;
+  outline: 1px solid grey;
+  display: flex;
+  justify-content: space-around;
+}
+.userPostButtonsWrapper button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: 40px;
+}
+
+

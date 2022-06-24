@@ -15,7 +15,8 @@ const iconsSlice = createSlice({
 	initialState,
 	reducers: {
 		chooseIcon(state, action: PayloadAction<ISideBarIcons>) {
-			return { ...state, icon: action.payload };
+			// return { ...state, icon: action.payload };
+			state.icon = action.payload;
 		},
 	},
 });

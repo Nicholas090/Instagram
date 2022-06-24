@@ -33,25 +33,14 @@
   ],
   "posts": [
     {
-      "img": "ostTest.png",
-      "userName": "test",
-      "active": true
-    },    {
-      "img": "ostTest.png",
-      "userName": "test",
-      "active": true
-    },    {
-      "img": "postTest.png",
-      "userName": "test",
-      "active": true
-    },    {
-      "img": "postTest.png",
-      "userName": "test",
-      "active": true
-    },    {
-      "img": "postTest.png",
-      "userName": "test",
-      "active": true
+      "imagePost": "postTest.png",
+      "userNickName": "vadik",
+      "active": true,
+      "imageAvatar": "testFace2.png",
+      "content": "content test=)",
+      "liked": false,
+      "id": 1
     }
+
   ]
 }

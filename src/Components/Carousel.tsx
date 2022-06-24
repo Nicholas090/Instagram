@@ -44,7 +44,7 @@ export const Carousel = ({
 				</div>
 			</div>
 
-			<div className={'carouselButtonWrapper'}>
+			<button className={'carouselButtonWrapper'}>
 				<div className={'carouselButton'} onClick={() => ButtonClick('right')}>
 					<svg
 						width="20"
@@ -62,9 +62,9 @@ export const Carousel = ({
 				</div>
 
 				{/*<button />*/}
-			</div>
+			</button>
 			{offset >= 0 ? null : (
-				<div className={'carouselButtonWrapper'}>
+				<button className={'carouselButtonWrapper'}>
 					<div className={'carouselButton'} onClick={() => ButtonClick('left')}>
 						<svg
 							width="20"
@@ -82,7 +82,7 @@ export const Carousel = ({
 					</div>
 
 					{/*<button />*/}
-				</div>
+				</button>
 			)}
 		</div>
 	);

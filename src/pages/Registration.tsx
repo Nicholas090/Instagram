@@ -83,70 +83,75 @@ const Registration = () => {
 	};
 
 	return (
-		<div className="loginWrap">
-			<form onSubmit={handleSubmit}>
-				<div className="loginBlock">
-					<div className="instLogo">
-						<img src={logo} alt="logo Instagram" />
+		<main>
+			<article>
+				<div className="loginWrap">
+					<form onSubmit={handleSubmit}>
+						<div className="loginBlock">
+							<div className="instLogo">
+								<img src={logo} alt="logo Instagram" />
+							</div>
+							<div className="block1Logo">
+								<p className="formError">{formErr == null ? '' : formErr.email}</p>
+								<input
+									type="email"
+									placeholder="Телефон или эл. адрес"
+									className="inpLogo"
+									name="email"
+									value={formValues.email}
+									onChange={handleChange}
+								/>
+							</div>
+							<div className="block1Logo">
+								<p className="formError">{formErr == null ? '' : formErr.userNickName}</p>
+								<input
+									type="text"
+									placeholder="Имя и фамилия"
+									className="inpLogo"
+									name="userNickName"
+									value={formValues.userNickName}
+									onChange={handleChange}
+								/>
+							</div>
+							<div className="block1Logo">
+								<p className="formError">{formErr == null ? '' : formErr.userName}</p>
+								<input
+									type="text"
+									placeholder="Имя пользователя"
+									className="inpLogo"
+									name="userName"
+									value={formValues.userName}
+									onChange={handleChange}
+								/>
+							</div>
+							<div className="block2Logo">
+								<p className="formError">{formErr == null ? '' : formErr.password}</p>
+								<input
+									type="password"
+									placeholder="Пароль"
+									className="inpLogo"
+									name="password"
+									value={formValues.password}
+									onChange={handleChange}
+								/>
+							</div>
+							<div className="blockLogoBtn">
+								<button className="logoBtn">Submit</button>
+							</div>
+						</div>
+					</form>
+					<div className="regBlock">
+						<p className="formRegLogText">
+							Есть аккаунт?{' '}
+							<Link to="/" className="formRegLog">
+								Вход
+							</Link>
+						</p>
 					</div>
-					<div className="block1Logo">
-						<p className="formError">{formErr == null ? '' : formErr.email}</p>
-						<input
-							type="email"
-							placeholder="Телефон или эл. адрес"
-							className="inpLogo"
-							name="email"
-							value={formValues.email}
-							onChange={handleChange}
-						/>
-					</div>
-					<div className="block1Logo">
-						<p className="formError">{formErr == null ? '' : formErr.userNickName}</p>
-						<input
-							type="text"
-							placeholder="Имя и фамилия"
-							className="inpLogo"
-							name="userNickName"
-							value={formValues.userNickName}
-							onChange={handleChange}
-						/>
-					</div>
-					<div className="block1Logo">
-						<p className="formError">{formErr == null ? '' : formErr.userName}</p>
-						<input
-							type="text"
-							placeholder="Имя пользователя"
-							className="inpLogo"
-							name="userName"
-							value={formValues.userName}
-							onChange={handleChange}
-						/>
-					</div>
-					<div className="block2Logo">
-						<p className="formError">{formErr == null ? '' : formErr.password}</p>
-						<input
-							type="password"
-							placeholder="Пароль"
-							className="inpLogo"
-							name="password"
-							value={formValues.password}
-							onChange={handleChange}
-						/>
-					</div>
-					<div className="blockLogoBtn">
-						<button className="logoBtn">Submit</button>
-					</div>
+					ß
 				</div>
-			</form>
-			<div className="regBlock">
-				<p className="formRegLogText">
-					Есть аккаунт?{' '}
-					<Link to="/" className="formRegLog">
-						Вход
-					</Link>
-				</p>
-			</div>
-		</div>
+			</article>
+		</main>
 	);
 };
 

@@ -80,53 +80,57 @@ const SignIn = observer(() => {
 	};
 
 	return (
-		<div className="loginWrap">
-			<div className="loginBlock">
-				<div className="instLogo">
-					<img src={logo} alt="logo Instagram" />
-				</div>
-				<form onSubmit={handleSubmit}>
-					<div className="block1Logo">
-						<p className="formError">{formErr == null ? '' : formErr.email}</p>
-						<input
-							type="email"
-							placeholder="Телефон, имя пользователя или эл. адрес"
-							className="inpLogo"
-							name="email"
-							value={formValues.email}
-							onChange={handleChange}
-						/>
-					</div>
-					<div className="block2Logo">
-						<p className="formError">{formErr == null ? '' : formErr.password}</p>
-						<input
-							type="password"
-							placeholder="Пароль"
-							className="inpLogo"
-							name="password"
-							value={formValues.password}
-							onChange={handleChange}
-						/>
-					</div>
-					{errorMessage ? (
-						<div>
-							<p style={{ color: 'red', paddingLeft: 20, paddingRight: 20 }}>{errorMessage}</p>
+		<main>
+			<article>
+				<div className="loginWrap">
+					<div className="loginBlock">
+						<div className="instLogo">
+							<img src={logo} alt="logo Instagram" />
 						</div>
-					) : null}
-					<div className="blockLogoBtn">
-						<button className="logoBtn">Submit</button>
+						<form onSubmit={handleSubmit}>
+							<div className="block1Logo">
+								<p className="formError">{formErr == null ? '' : formErr.email}</p>
+								<input
+									type="email"
+									placeholder="Телефон, имя пользователя или эл. адрес"
+									className="inpLogo"
+									name="email"
+									value={formValues.email}
+									onChange={handleChange}
+								/>
+							</div>
+							<div className="block2Logo">
+								<p className="formError">{formErr == null ? '' : formErr.password}</p>
+								<input
+									type="password"
+									placeholder="Пароль"
+									className="inpLogo"
+									name="password"
+									value={formValues.password}
+									onChange={handleChange}
+								/>
+							</div>
+							{errorMessage ? (
+								<div>
+									<p style={{ color: 'red', paddingLeft: 20, paddingRight: 20 }}>{errorMessage}</p>
+								</div>
+							) : null}
+							<div className="blockLogoBtn">
+								<button className="logoBtn">Submit</button>
+							</div>
+						</form>
 					</div>
-				</form>
-			</div>
-			<div className="regBlock">
-				<p className="formRegLogText">
-					У вас ещё нет аккаунта?{' '}
-					<Link to="/register" className="formRegLog">
-						Регистрация
-					</Link>
-				</p>
-			</div>
-		</div>
+					<div className="regBlock">
+						<p className="formRegLogText">
+							У вас ещё нет аккаунта?{' '}
+							<Link to="/register" className="formRegLog">
+								Регистрация
+							</Link>
+						</p>
+					</div>
+				</div>
+			</article>
+		</main>
 	);
 });
 

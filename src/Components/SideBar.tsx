@@ -10,12 +10,10 @@ const SideBar = () => {
 
 	const active = useAppSelector((state) => state.icons.icon);
 	return (
-		<div className="sideBarWrapper">
+		<aside className="sideBarWrapper">
 			<div>
-				<div>
-					<div onClick={() => iconClick('home')} className={'pointer'}>
-						<HomeIcon active={active === 'home'} />
-					</div>
+				<div onClick={() => iconClick('home')} className={'pointer'}>
+					<HomeIcon active={active === 'home'} />
 				</div>
 				<div>
 					<div onClick={() => iconClick('loop')} className={'pointer'}>
@@ -39,7 +37,7 @@ const SideBar = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</aside>
 	);
 };
 export default SideBar;
