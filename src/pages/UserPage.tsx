@@ -49,7 +49,7 @@ const UserPage = () => {
 			<LogoUserPage />
 			<div style={{ display: 'flex', justifyContent: 'flex-start' }}>
 				<SideBar />
-				<div style={{ display: 'flex', flexDirection: 'column', marginLeft: '30px' }}>
+				<div className={'mainPostContainerPage'}>
 					<div style={{ display: 'flex', marginTop: '50px', height: '100px' }}>
 						<UserClientStories img={'testFace2.png'} userName={''} active={false} />
 						<Carousel countMaxStories={4} countAllStories={7} storiesBlockWidth={115}>

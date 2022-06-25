@@ -39,7 +39,26 @@
       "imageAvatar": "testFace2.png",
       "content": "content test=)",
       "liked": false,
-      "id": 1
+      "id": 1,
+      "likeCount": 0
+    },    {
+      "imagePost": "postTest.png",
+      "userNickName": "vadik",
+      "active": true,
+      "imageAvatar": "testFace2.png",
+      "content": "content test=)",
+      "liked": false,
+      "id": 1,
+      "likeCount": 0
+    },    {
+      "imagePost": "postTest.png",
+      "userNickName": "vadik",
+      "active": true,
+      "imageAvatar": "testFace2.png",
+      "content": "content test=)",
+      "liked": false,
+      "id": 1,
+      "likeCount": 0
     }
 
   ]

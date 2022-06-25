@@ -54,7 +54,7 @@ const SignIn = observer(() => {
 		if (localStorage.getItem('token') && !store.setAuth) {
 			store.checkAuth().then((res: boolean | undefined) => {
 				if (res === true) {
-					navigate('/user');
+					navigate('/home');
 				}
 			});
 		}

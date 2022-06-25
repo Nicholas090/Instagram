@@ -9,7 +9,7 @@ import { setLikedPost } from '../redux/reducers/usersPosts';
 interface IUserPostProps extends IUserPost {}
 
 export const UserPost = (Post: IUserPostProps) => {
-	const { imagePost, imageAvatar, userNickName, content, liked, id, likeCount } = Post;
+	const { imagePost, imageAvatar, userNickName, content, id } = Post;
 	const currentPostImage = useImage(imagePost);
 	const currentAvatarImage = useImage(imageAvatar);
 	if (currentPostImage.error) {
@@ -95,7 +95,7 @@ export const UserPost = (Post: IUserPostProps) => {
 					</div>
 				</section>
 				<section className={'userPostLikeCountWrapper'}>
-					<span className={'userPostLikeCount'}>{likeCount}</span>
+					<span className={'userPostLikeCount'}>{currentPost!.likeCount} likes</span>
 				</section>
 			</div>
 		</article>

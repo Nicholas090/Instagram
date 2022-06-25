@@ -43,7 +43,7 @@ const Registration = () => {
 					if (res === true) {
 						setFormValues({ email: '', password: '', userNickName: '', userName: '' });
 						setSubmit(false);
-						navigate('/user');
+						navigate('/home');
 					}
 				})
 				.finally(() => {
