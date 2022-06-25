@@ -51,9 +51,9 @@ const SideBar = () => {
 			</div>
 
 			<div>
-				<button onClick={() => iconClick('profile')} className={'pointer'}>
+				<Link to={'/profile'} onClick={() => iconClick('profile')} className={'pointer'}>
 					<UserIcon active={active === 'profile'} />
-				</button>
+				</Link>
 			</div>
 		</aside>
 	);

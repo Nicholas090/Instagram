@@ -1,12 +1,14 @@
+import React from 'react';
 import { LogoUserPage } from '../Components/LogoUserPage';
 import SideBar from '../Components/SideBar';
-import React from 'react';
 
 const SearchPage = () => {
 	return (
 		<div>
 			<LogoUserPage />
-			<SideBar />
+			<div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+				<SideBar />
+			</div>
 		</div>
 	);
 };

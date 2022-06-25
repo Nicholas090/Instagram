@@ -18,7 +18,10 @@ export const userPostsInfoSlice = createSlice({
 	reducers: {
 		setPostsInfo(state, action: PayloadAction<IUsersPostsInfo>) {
 			// return { ...state, userPostsInfo: [...state.userPostsInfo, action.payload] };
-			state.userPostsInfo.push(action.payload);
+			const currentPost = state.userPostsInfo.find((e) => e.id === action.payload.id);
+			if (currentPost === undefined) {
+				state.userPostsInfo.push(action.payload);
+			}
 		},
 		setLikedPost(state, action: PayloadAction<number>) {
 			state.userPostsInfo.map((e) => {

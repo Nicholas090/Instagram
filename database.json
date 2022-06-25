@@ -39,7 +39,7 @@
       "imageAvatar": "testFace2.png",
       "content": "content test=)",
       "liked": false,
-      "id": 1,
+      "id": 4,
       "likeCount": 0
     },    {
       "imagePost": "postTest.png",
@@ -48,7 +48,7 @@
       "imageAvatar": "testFace2.png",
       "content": "content test=)",
       "liked": false,
-      "id": 1,
+      "id": 3,
       "likeCount": 0
     },    {
       "imagePost": "postTest.png",
@@ -57,7 +57,7 @@
       "imageAvatar": "testFace2.png",
       "content": "content test=)",
       "liked": false,
-      "id": 1,
+      "id": 2,
       "likeCount": 0
     }
 

@@ -13,8 +13,6 @@ import { UserPost } from '../Components/UserPost';
 import { useId } from 'react';
 
 const UserPage = () => {
-	const reactId = useId();
-
 	const dispatch = useAppDispatch();
 	const stories = useAppSelector((state) => state.userStoriesInfo.userStoriesInfo);
 	const posts = useAppSelector((state) => state.userPostsInfo.userPostsInfo);
@@ -49,6 +47,7 @@ const UserPage = () => {
 			<LogoUserPage />
 			<div style={{ display: 'flex', justifyContent: 'flex-start' }}>
 				<SideBar />
+
 				<div className={'mainPostContainerPage'}>
 					<div style={{ display: 'flex', marginTop: '50px', height: '100px' }}>
 						<UserClientStories img={'testFace2.png'} userName={''} active={false} />
