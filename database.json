@@ -41,24 +41,6 @@
       "liked": false,
       "id": 4,
       "likeCount": 0
-    },    {
-      "imagePost": "postTest.png",
-      "userNickName": "vadik",
-      "active": true,
-      "imageAvatar": "testFace2.png",
-      "content": "content test=)",
-      "liked": false,
-      "id": 3,
-      "likeCount": 0
-    },    {
-      "imagePost": "postTest.png",
-      "userNickName": "vadik",
-      "active": true,
-      "imageAvatar": "testFace2.png",
-      "content": "content test=)",
-      "liked": false,
-      "id": 2,
-      "likeCount": 0
     }
 
   ]

@@ -45,11 +45,11 @@ const UserPage = () => {
 	return (
 		<div>
 			<LogoUserPage />
-			<div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+			<div className={'userPageWrapper'}>
 				<SideBar />
 
 				<div className={'mainPostContainerPage'}>
-					<div style={{ display: 'flex', marginTop: '50px', height: '100px' }}>
+					<div style={{ display: 'flex', height: '100px' }}>
 						<UserClientStories img={'testFace2.png'} userName={''} active={false} />
 						<Carousel countMaxStories={4} countAllStories={7} storiesBlockWidth={115}>
 							{stories.map((e, i) => {

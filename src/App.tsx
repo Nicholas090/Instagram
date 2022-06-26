@@ -15,6 +15,7 @@ function App() {
 			<Route path="/home" element={<UserPage />} />
 			<Route path="/reels" element={<UserPage />} />
 			<Route path="/profile" element={<UserPage />} />
+			<Route path="*" element={<div>404</div>} />
 		</Routes>
 	);
 }

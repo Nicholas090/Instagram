@@ -108,7 +108,7 @@ body {
 }
 .sideBarWrapper {
   height: 550px;
-  width: 90px;
+  width: 10%;
   background-color: #EFEFEF;
   border-radius: 56px;
   margin: 70px 0 auto 45px;
@@ -128,8 +128,11 @@ body {
 }
 
 .userLogoWrapper {
-  margin: auto;
   text-align: center;
+}
+
+.userLogoWrapper img {
+  /*height: 4%*/
 }
 .userStoriesWrapper {
   height: 100px;
@@ -236,30 +239,22 @@ display: block;
 
 .postsBlockWrapper {
   margin-top: 30px;
-  /*height: 100%;*/
-  overflow: scroll;
+  /*max-height: 660px;*/
+  /*overflow: scroll;*/
 }
 
 .postWrapper {
-  /*width: 650px;*/
-  /*height: 450px;*/
   background-color: #EFEFEF;
   border-radius: 36px;
   margin-bottom: 30px;
   padding: 15px;
   display: flex;
+  width: 100%;
 }
-
-.postWrapper .img {
-  max-height: 400px;
-  max-width: 400px;
-}
-
-
 
 .postImage {
-  /*max-width: 400px;*/
-  max-height: 400px;
+  max-width: 60.69%;
+
 }
 
 .main-container-post {
@@ -300,7 +295,7 @@ display: block;
 .postInfoWrapper {
   margin-left: 10px;
   margin-top: 10px;
-  width: 100%;
+  width: 37.6%;
 
 }
 
@@ -408,7 +403,74 @@ display: block;
   display: flex;
   flex-direction: column;
   margin-left: 30px;
-  height: 100vh;
+  width: 80.663%;
+  margin-top: 50px;
+
+}
+
+.mainPostContainerPage > div {
+  width: 100%;
   overflow: hidden;
 }
 
+.searchPageInput {
+  width: 400px;
+  height: 60px;
+  border-radius: 25px;
+  background-color: #EFEFEF;
+  border: none;
+  font-size: 20px ;
+  padding-left: 50px;
+}
+.searchPageHeader {
+  margin-top: 70px;
+  /*margin-left: 50px;*/
+  display: flex;
+}
+
+.searchPageTypesWrapper {
+  width: 500px;
+  display: flex;
+  margin-left: 30px;
+}
+
+.searchPageTypesWrapper button {
+  background: transparent;
+  border: none;
+  margin: auto;
+  font-family: 'Product-Sans-Regular', serif;
+  font-weight: 100;
+  color: #8D8D8D;
+  font-size: 20px;
+}
+.searchPageTypesWrapper button:active {
+  color: #0095f6;
+}
+
+.searchPagePostWrapper {
+  width: 900px;
+  height: 900px;
+  background-color: #8D8D8D;
+  margin-top: 30px;
+}
+
+
+.userPageWrapper {
+  display: flex;
+  justify-content: flex-start;
+  width: 59.03%;
+}
+.userSearchPageWrapper {
+  display: flex;
+  justify-content: flex-start;
+  width: 59.03%;
+  overflow: hidden;
+}
+
+.mainSearchContainerPage {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  width: 80.663%;
+  margin-top: 50px;
+}
