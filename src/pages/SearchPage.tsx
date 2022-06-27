@@ -29,7 +29,7 @@ const SearchPage = () => {
 				<SideBar />
 				<div className={'mainSearchContainerPage'}>
 					<header className={'searchPageHeader'}>
-						<form onSubmit={handleSubmit}>
+						<form onSubmit={handleSubmit} style={{ width: '52%' }}>
 							<input
 								placeholder="Search"
 								className={'searchPageInput'}
@@ -46,7 +46,9 @@ const SearchPage = () => {
 							<button>Reels</button>
 						</div>
 					</header>
-					<div className={'searchPagePostWrapper'}></div>
+					<div className={'searchPagePostWrapper'}>
+						<div className={'searchPageFirstPhotosBlock'}></div>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -48,7 +48,7 @@ const UserPage = () => {
 			<div className={'userPageWrapper'}>
 				<SideBar />
 				<div className={'mainPostContainerPage'}>
-					<div style={{ display: 'flex', height: '100px', width: '111%', overflow: 'hidden' }}>
+					<div style={{ display: 'flex', height: '100px', width: '111%' }}>
 						<UserClientStories img={'testFace2.png'} userName={''} active={false} />
 						<Carousel countMaxStories={4} countAllStories={7} storiesBlockWidth={115}>
 							{stories.map((e, i) => {
