@@ -4,6 +4,7 @@ import SideBar from '../Components/SideBar';
 import testSearch1 from '../assets/Rectangle 69.png';
 import testSearch2 from '../assets/Rectangle 70.png';
 import testSearch3 from '../assets/Rectangle 71.png';
+import testSearch4 from '../assets/Rectangle 72.png';
 
 const SearchPage = () => {
 	const [formValue, setFormValue] = useState<string>('');
@@ -54,8 +55,7 @@ const SearchPage = () => {
 							<img src={testSearch1} className={'searchPageSmallPhoto'} />
 							<img src={testSearch2} className={'searchPageSmallPhoto'} />
 							<img src={testSearch3} className={'searchPageSmallPhoto'} />
-							<div className={'myFlip'} />
-							<img src={testSearch3} />
+							<img src={testSearch4} className={'searchPageMediumPhoto'} />
 						</div>
 					</div>
 				</div>

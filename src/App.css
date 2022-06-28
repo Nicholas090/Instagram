@@ -486,17 +486,19 @@ display: block;
 }
 
 .searchPageFirstPhotosBlock {
-  display: flex;
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  grid-row-gap: 10px;
+  grid-column-gap: 1.5%;
+
   width: 100%;
-  justify-content: space-between;
-  flex-wrap: wrap;
+
 }
 
 .searchPageSmallPhoto {
-  width: 31%;
+  max-width: 100%;
+  justify-self: center;
+}
+.searchPageMediumPhoto {
 }
 
-.myFlip {
-  width: 100%;
-  height: 25px;
-}
