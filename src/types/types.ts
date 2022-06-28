@@ -8,3 +8,8 @@ export interface IUserPost {
 	id: number;
 	likeCount: number;
 }
+
+export interface ISearchPage {
+	imagesSmall: string[];
+	imagesBig: string[];
+}

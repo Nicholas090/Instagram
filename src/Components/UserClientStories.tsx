@@ -9,13 +9,16 @@ export const UserClientStories = ({ img, userName, active }: IUsersStoriesInfo) 
 	if (image === null) {
 		return null;
 	}
-
+	//
 	return (
-		<div className={active ? 'userStoriesWrapper' : 'userClientStoriesWrapperNonActive'}>
-			<button className="userStories clientStories pointer" onClick={() => console.log('clicked')}>
+		<div className={active ? 'userClientStoriesWrapper' : 'userClientStoriesWrapperNonActive'}>
+			<div
+				className={`clientStories pointer ${!active && !loading ? 'clientStoriesClick' : ''}`}
+				onClick={() => console.log('clicked')}
+			>
 				{loading ? null : <img src={image} className={'clientStoriesImg'} />}
-				{!active && loading ? null : <div className={'addStoriesWrapper plus'}></div>}
-			</button>
+				{active || loading ? null : <div className={'addStoriesWrapper plus'}></div>}
+			</div>
 		</div>
 	);
 };

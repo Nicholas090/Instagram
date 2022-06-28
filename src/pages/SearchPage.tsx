@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { LogoUserPage } from '../Components/LogoUserPage';
 import SideBar from '../Components/SideBar';
+import testSearch1 from '../assets/Rectangle 69.png';
+import testSearch2 from '../assets/Rectangle 70.png';
+import testSearch3 from '../assets/Rectangle 71.png';
 
 const SearchPage = () => {
 	const [formValue, setFormValue] = useState<string>('');
@@ -47,7 +50,13 @@ const SearchPage = () => {
 						</div>
 					</header>
 					<div className={'searchPagePostWrapper'}>
-						<div className={'searchPageFirstPhotosBlock'}></div>
+						<div className={'searchPageFirstPhotosBlock'}>
+							<img src={testSearch1} className={'searchPageSmallPhoto'} />
+							<img src={testSearch2} className={'searchPageSmallPhoto'} />
+							<img src={testSearch3} className={'searchPageSmallPhoto'} />
+							<div className={'myFlip'} />
+							<img src={testSearch3} />
+						</div>
 					</div>
 				</div>
 			</div>

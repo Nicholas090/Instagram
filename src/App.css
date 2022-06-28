@@ -194,15 +194,33 @@ body {
   display: flex;
 }
 .clientStories {
+  border-radius: 50%;
+  display: flex;
   position: relative;
-  border: none;
   background-color: transparent;
+  height: 80px;
+  width: 80px;
+  margin: auto;
+}
+.clientStories img {
+  max-width: 82px;
+  max-height: 82px;
+}
+
+.userClientStoriesWrapper {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #D6295D;
 }
 .clientStoriesImg {
 display: block;
 }
 
-.clientStories:active img{
+.clientStoriesClick:active img{
   transition: 0.2s;
   transform: scale(80%);
 
@@ -444,9 +462,6 @@ display: block;
 }
 
 .searchPagePostWrapper {
-  width: 100%;
-  height: 100%;
-  background-color: #8D8D8D;
   margin-top: 30px;
 }
 
@@ -460,7 +475,7 @@ display: block;
   display: flex;
   justify-content: flex-start;
   width: 66.03%;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 .mainSearchContainerPage {
@@ -472,4 +487,16 @@ display: block;
 
 .searchPageFirstPhotosBlock {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.searchPageSmallPhoto {
+  width: 31%;
+}
+
+.myFlip {
+  width: 100%;
+  height: 25px;
 }
