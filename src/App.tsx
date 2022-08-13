@@ -5,6 +5,7 @@ import Registration from './pages/Registration';
 import SignIn from './pages/SignIn';
 import UserPage from './pages/UserPage';
 import SearchPage from './pages/SearchPage';
+import Profile from "./pages/Profile";
 
 function App() {
 	return (
@@ -14,7 +15,7 @@ function App() {
 			<Route path="/search" element={<SearchPage />} />
 			<Route path="/home" element={<UserPage />} />
 			<Route path="/reels" element={<UserPage />} />
-			<Route path="/profile" element={<UserPage />} />
+			<Route path="/profile" element={<Profile />} />
 			<Route path="*" element={<div>404</div>} />
 		</Routes>
 	);

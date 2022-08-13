@@ -9,7 +9,7 @@ import React from 'react';
 import axios from 'axios';
 import { IUsersStoriesInfo, setStoriesInfo } from '../redux/reducers/usersStoriesInfo';
 import { useAppDispatch } from '../redux/hooks';
-import { ISearchPagePostsData } from '../types/types';
+import { ISearchPagePostsData } from '../interfaces/types';
 
 const SearchPagePosts = () => {
 	const dispatch = useAppDispatch();

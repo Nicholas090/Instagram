@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IUserPost } from '../../types/types';
+import { IUserPost } from '../../interfaces/types';
 import { stat } from 'fs';
 
 export interface IUsersPostsInfo extends IUserPost {}

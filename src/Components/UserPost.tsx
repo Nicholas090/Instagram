@@ -1,6 +1,6 @@
 import useImage from '../hooks/imageHook';
 import defaultImage from '../assets/defaultImage.jpeg';
-import { IUserPost } from '../types/types';
+import { IUserPost } from '../interfaces/types';
 import defaultUserIcon from '../assets/defaultUserIcon.png';
 import { CommentIcon, HeartLike, MessageIcon, SaveIcon } from '../icons/icons';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
