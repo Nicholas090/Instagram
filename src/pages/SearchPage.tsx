@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { LogoUserPage } from '../Components/LogoUserPage';
 import SideBar from '../Components/SideBar';
-import testSearch1 from '../assets/Rectangle 69.png';
-import testSearch2 from '../assets/Rectangle 70.png';
-import testSearch3 from '../assets/Rectangle 71.png';
-import testSearch4 from '../assets/Rectangle 72.png';
+import SearchPagePosts from '../Components/SearchPagePosts';
 
 const SearchPage = () => {
 	const [formValue, setFormValue] = useState<string>('');
@@ -18,14 +15,14 @@ const SearchPage = () => {
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setFormValue(e.target.value);
 	};
-
-	useEffect(() => {
-		if (isSubmit) {
-			console.log(formValue);
-			setFormValue('');
-			setSubmit(false);
-		}
-	}, [isSubmit]);
+	//
+	// useEffect(() => {
+	// 	if (isSubmit) {
+	// 		console.log(formValue);
+	// 		setFormValue('');
+	// 		setSubmit(false);
+	// 	}
+	// }, [isSubmit]);
 	return (
 		<div>
 			<LogoUserPage />
@@ -51,12 +48,7 @@ const SearchPage = () => {
 						</div>
 					</header>
 					<div className={'searchPagePostWrapper'}>
-						<div className={'searchPageFirstPhotosBlock'}>
-							<img src={testSearch1} className={'searchPageSmallPhoto'} />
-							<img src={testSearch2} className={'searchPageSmallPhoto'} />
-							<img src={testSearch3} className={'searchPageSmallPhoto'} />
-							<img src={testSearch4} className={'searchPageMediumPhoto'} />
-						</div>
+						<SearchPagePosts />
 					</div>
 				</div>
 			</div>

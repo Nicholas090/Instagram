@@ -490,7 +490,6 @@ display: block;
   grid-template-columns: 31% 31% 31%;
   grid-row-gap: 10px;
   grid-column-gap: 1.5%;
-
   width: 100%;
 
 }
@@ -500,5 +499,9 @@ display: block;
   justify-self: center;
 }
 .searchPageMediumPhoto {
+  max-width: 100%;
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
 }
+
 

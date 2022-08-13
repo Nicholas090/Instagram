@@ -9,7 +9,7 @@ export interface IUserPost {
 	likeCount: number;
 }
 
-export interface ISearchPage {
+export interface ISearchPagePostsData {
 	imagesSmall: string[];
 	imagesBig: string[];
 }
